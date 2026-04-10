@@ -17,10 +17,10 @@ INSTALLATION
 --------------------------------------------------
 
 Run the installer script:
-
+```bash
 chmod +x install.sh
 ./install.sh
-
+```
 The installer automatically installs required dependencies.
 
 Dependencies installed:
@@ -38,28 +38,28 @@ USAGE
 --------------------------------------------------
 
 View help menu:
-
+```bash
 ./main.sh -h
-
+```
 
 --------------------------------------------------
 BASIC EXAMPLES
 --------------------------------------------------
 
 Scan a local project
-
+```bash
 ./main.sh --file-path /path/to/project
-
+```
 
 Scan a Git repository
-
+``` bash
 ./main.sh --repo https://github.com/user/repo.git
-
+```
 
 Scan and send email report
-
+``` bash
 ./main.sh --file-path /path/to/project --email you@example.com
-
+```
 If email configuration is not provided, the tool automatically loads:
 
 config/smtp.conf
@@ -68,9 +68,9 @@ config/smtp.conf
 --------------------------------------------------
 SEVERITY FILTERING (OPTIONAL)
 --------------------------------------------------
-
+``` bash
 ./main.sh --file-path /project --severity HIGH,CRITICAL
-
+```
 Default scan includes:
 
 UNKNOWN, LOW, MEDIUM, HIGH, CRITICAL
@@ -85,13 +85,13 @@ SMTP configuration file location:
 config/smtp.conf
 
 Example configuration:
-
+``` bash
 SMTP_SERVER="smtp.gmail.com"
 SMTP_PORT="587"
 SMTP_USER="your_email@gmail.com"
 SMTP_PASS="your_app_password"
 FROM_EMAIL="your_email@gmail.com"
-
+```
 The install.sh script can create this file interactively.
 
 
@@ -102,9 +102,9 @@ SCANNER ENGINE
 This wrapper uses Trivy filesystem scanning.
 
 Internal command used:
-
+``` bash
 trivy fs --severity <levels> --scanners vuln,secret,misconfig
-
+```
 Trivy detects:
 
 - Vulnerabilities
@@ -199,8 +199,9 @@ USE CASES
 --------------------------------------------------
 QUICK START
 --------------------------------------------------
-
+``` bash
 chmod +x install.sh
 ./install.sh
 
 ./main.sh --file-path ./your-project
+```
