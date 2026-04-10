@@ -143,7 +143,7 @@ Reports contain raw Trivy scan results.
 --------------------------------------------------
 SCAN WORKFLOW
 --------------------------------------------------
-
+```
 Local Code / Git Repository
         │
         ▼
@@ -160,7 +160,7 @@ Raw Report Generated
         │
         ▼
 Optional SMTP Email Delivery
-
+```
 
 --------------------------------------------------
 FEATURES
